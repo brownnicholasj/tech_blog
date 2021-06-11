@@ -1,4 +1,4 @@
-# E-Commerce Backend
+# Tech Blog
 
 ![License: ISC](https://img.shields.io/badge/License-ISC-blue)
 
