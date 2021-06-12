@@ -5,30 +5,24 @@
     </h2>
   </div>
   <div class="container">
+    {{#each blogs}}
     {{!-- run each statement here up to 4 posts --}}
     <div class="row" id="blogPost">
-      <div class="col-md-12">Author : Date</div>
+      <div class="col-md-12">{{this.blog_author}} : {{this.blog_date}}</div>
       <div class="col-md-12">
-        <h3>Title</h3><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia sagittis venenatis. Nulla interdum quis justo eu rutrum. Nulla feugiat sit amet massa eget ultrices. Duis at quam massa. Ut in eleifend nulla, accumsan fermentum arcu. Duis accumsan ornare iaculis. Donec sit amet velit tempor, lacinia quam non, scelerisque felis. Duis pretium eleifend malesuada. Integer ut dignissim est.<br>
-        </p>
+        <h3>{{this.blog_title}}</h3><br>
+        <p>{{this.blog_body}}</p>
       </div>
     </div>
-    <div class="row" id="blogPost">
-      <div class="col-md-12">Author : Date</div>
-      <div class="col-md-12">
-        <h3>Title</h3><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia sagittis venenatis. Nulla interdum quis justo eu rutrum. Nulla feugiat sit amet massa eget ultrices. Duis at quam massa. Ut in eleifend nulla, accumsan fermentum arcu. Duis accumsan ornare iaculis. Donec sit amet velit tempor, lacinia quam non, scelerisque felis. Duis pretium eleifend malesuada. Integer ut dignissim est.<br>
-        </p>
-      </div>
-    </div>
+    {{/each}}
     {{!-- end of each statement here  --}}
   </div>
-</div>
-<div class="col-md-12 text-center">
+  <div class="col-md-12 text-center">
   <button type="button" class="newPost" value="Submit">
   +New Post
   </button>
 </div>
+</div>
+
 
 <script src="/js/new-post.js"></script>

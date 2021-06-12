@@ -16,14 +16,14 @@ Blog.init(
 			allowNull: false,
 		},
 		blog_body: {
-			type: DataTypes.STRING,
+			type: DataTypes.STRING(15000),
 			allowNull: true,
 		},
 		blog_author: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		blog_time: {
+		blog_date: {
 			type: DataTypes.DATE,
 			allowNull: false,
 		},

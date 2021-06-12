@@ -3,12 +3,13 @@ const Blog = require('../models/Blog');
 
 // route to get all blogs
 router.get('/', async (req, res) => {
-	// const blogData = await blog.findAll().catch((err) => {
-	// 	res.json(err);
-	// });
+	const blogData = await Blog.findAll().catch((err) => {
+		res.json(err);
+	});
 	try {
-		// const blogs = blogData.map((blog) => blog.get({ plain: true }));
-		res.render('home');
+		const blogs = blogData.map((blog) => blog.get({ plain: true }));
+		// console.log(blogs);
+		res.render('home', { blogs });
 	} catch (error) {
 		res.status(500).json(error);
 	}
