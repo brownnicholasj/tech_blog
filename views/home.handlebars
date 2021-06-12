@@ -8,7 +8,7 @@
     {{#each blogs}}
     {{!-- run each statement here up to 4 posts --}}
     <div class="row" id="blogPost">
-      <div class="col-md-12">{{this.blog_author}} : {{this.blog_date}}</div>
+      <div class="col-md-12">{{this.blog_author}} : {{format_date this.blog_date}}</div>
       <div class="col-md-12">
         <h3>{{this.blog_title}}</h3><br>
         <p>{{this.blog_body}}</p>
