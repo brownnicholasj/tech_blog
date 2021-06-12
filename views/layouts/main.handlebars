@@ -1,21 +1,37 @@
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        &#127881 Tech Blog &#127881
+    <div class="container-fluid">
+    <header class="row">
+      <h1 class="col-md-2">
+        Tech Blog
       </h1>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="#">Home</a></h2>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="#">Dashboard</a></h2>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="#">Login</a></h2>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="#">Logout</a></h2>
     </header>
+    </div>
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>
-  </div>
   </body>
 
 </html>

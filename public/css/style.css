@@ -1,0 +1,84 @@
+@btn-default-bg {
+	backgrou
+}
+
+/* Font family from google fonts */
+body {
+	font-family: 'Merriweather', serif;
+	background-color: black;
+	color: rgb(149, 149, 149);
+}
+
+header {
+	text-align: center;
+	color: rgb(149, 149, 149);
+	text-shadow: 2px 2px 3px rgb(149, 149, 149);
+	font-weight: 900;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+	align-items: flex-end;
+}
+
+h1 {
+	font-size: 42px;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+a {
+	color: rgb(149, 149, 149);
+	padding-left: 3px;
+}
+
+a:hover {
+	color: black;
+	text-shadow: 5px 5px 10px 5px rgb(149, 149, 149);
+}
+
+#homeHeader {
+	font-size: 36px;
+	text-shadow: 1px 1px 3px rgb(149, 149, 149);
+	font-weight: 900;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+}
+
+#blogPosts {
+	height: 80vh;
+}
+
+#blogPost {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: dashed rgb(149, 149, 149);
+}
+.newPost {
+	color: rgb(149, 149, 149);
+	font-size: 32px;
+	text-shadow: 1px 1px 3px rgb(149, 149, 149);
+	font-weight: 900;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+	background-color: black;
+}
+
+/* account for smaller screen sizes to stack for mobile first design */
+@media only screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
+	#searchContainer {
+		min-height: 100px;
+	}
+
+	#currentDay {
+		min-height: 100px;
+	}
+
+	#forecast {
+		min-height: 100px;
+	}
+}

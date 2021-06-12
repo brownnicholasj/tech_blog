@@ -1,71 +1,34 @@
-<div class="menu-container">
-  <div class="card-header col-md-12 text-center">
-    <h2>
-      &#127869 Current Menu
+<div class="container" id="blogPosts">
+  <div class="col-md-12 text-center" id="homeTitle">
+    <h2 id="homeHeader">
+      Latest Blogs
     </h2>
   </div>
-  {{#each dishes as |dish|}}
-  <div class="dish col-md-4">
-    <p>
-      {{dish.id}}.
-      {{dish.dish_name}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Guest:
-      {{dish.guest_name}}
-    </p>
-  </div>
-  <div class="col-md-3">
-    🥜: {{#if dish.has_nuts}} Contains nuts {{else}} No nuts {{/if}}
-  </div>
-  {{/each}}
-  <!-- This is the form for adding a new dish -->
-  <div class="add-dish-container">
-    <h2>
-      RSVP with the dish you plan to bring!
-    </h2>
-    <form class="new-dish-form">
-      <label for="dish_name">
-        Dish Name:
-      </label>
-      <br />
-      <textarea id="dish_name" name="dish_name" rows="2" cols="30">
-      {{dish_name}}
-    </textarea>
-      <br />
-      <label for="description">
-        Description:
-      </label>
-      <br />
-      <textarea id="description" name="description" rows="5" cols="30">
-      {{description}}
-    </textarea>
-      <br />
-      <label for="guest_name">
-        Guest Name:
-      </label>
-      <br />
-      <textarea id="guest_name" name="guest_name" rows="2" cols="30">
-      {{guest_name}}
-    </textarea>
-      <br />
-      <br />
-      {{#if has_nuts}}
-      <input type="checkbox" id="has_nuts" name="has_nuts" checked />
-      {{else}}
-      <input type="checkbox" id="has_nuts" name="has_nuts" />
-      {{/if}}
-      <label for="has_nuts">
-        Check box if this dish contains nuts
-      </label>
-      <br />
-      <button type="submit" value="Submit">
-        Submit
-      </button>
-    </form>
+  <div class="container">
+    {{!-- run each statement here up to 4 posts --}}
+    <div class="row" id="blogPost">
+      <div class="col-md-12">Author : Date</div>
+      <div class="col-md-12">
+        <h3>Title</h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia sagittis venenatis. Nulla interdum quis justo eu rutrum. Nulla feugiat sit amet massa eget ultrices. Duis at quam massa. Ut in eleifend nulla, accumsan fermentum arcu. Duis accumsan ornare iaculis. Donec sit amet velit tempor, lacinia quam non, scelerisque felis. Duis pretium eleifend malesuada. Integer ut dignissim est.<br>
+        </p>
+      </div>
+    </div>
+    <div class="row" id="blogPost">
+      <div class="col-md-12">Author : Date</div>
+      <div class="col-md-12">
+        <h3>Title</h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia sagittis venenatis. Nulla interdum quis justo eu rutrum. Nulla feugiat sit amet massa eget ultrices. Duis at quam massa. Ut in eleifend nulla, accumsan fermentum arcu. Duis accumsan ornare iaculis. Donec sit amet velit tempor, lacinia quam non, scelerisque felis. Duis pretium eleifend malesuada. Integer ut dignissim est.<br>
+        </p>
+      </div>
+    </div>
+    {{!-- end of each statement here  --}}
   </div>
 </div>
+<div class="col-md-12 text-center">
+  <button type="button" class="newPost" value="Submit">
+  +New Post
+  </button>
+</div>
 
-<script src="/js/add-dish.js"></script>
+<script src="/js/new-post.js"></script>
