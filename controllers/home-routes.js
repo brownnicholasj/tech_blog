@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 		res.json(err);
 	});
 	try {
-		const blogs = blogData.map((blog) => blog.get({ plain: true }));
+		const blogs = blogData.slice(0, 4).map((blog) => blog.get({ plain: true }));
 		// console.log(blogs);
 		res.render('home', { blogs });
 	} catch (error) {
