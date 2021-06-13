@@ -28,6 +28,14 @@ h2 {
 	font-weight: 500;
 }
 
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
 a {
 	color: rgb(149, 149, 149);
 	padding-left: 3px;
@@ -47,13 +55,28 @@ a:hover {
 }
 
 #blogPosts {
-	height: 80vh;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 #blogPost {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: dashed rgb(149, 149, 149);
+	
+}
+#homeTitle {
+	height: 20px;
+}
+
+.push {
+	height: 5vh;
+}
+
+#newPostDiv {
+	background-color: black;
+
 }
 .newPost {
 	color: rgb(149, 149, 149);
@@ -63,22 +86,14 @@ a:hover {
 	border: 2px solid black;
 	box-shadow: 2px 2px black;
 	background-color: black;
+	align-self: flex-end;
+}
+
+.container #blogPosts {
+	height: 10vh;
 }
 
 /* account for smaller screen sizes to stack for mobile first design */
 @media only screen and (max-width: 600px) {
-	.container {
-		flex-direction: column;
-	}
-	#searchContainer {
-		min-height: 100px;
-	}
 
-	#currentDay {
-		min-height: 100px;
-	}
-
-	#forecast {
-		min-height: 100px;
-	}
 }

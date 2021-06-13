@@ -1,22 +1,22 @@
 <div class="container" id="blogPosts">
   <div class="col-md-12 text-center" id="homeTitle">
     <h2 id="homeHeader">
-      Latest Blogs
+      {{blog_title}}
     </h2>
+    <h3>
+      By: {{blog_author}}
+    </h3>
+    <h4>
+    {{format_date blog_date}}
+    </h4>
   </div>
   <div class="container">
-    {{#each blogs}}
-    {{!-- run each statement here up to 4 posts --}}
     <div class="row" id="blogPost">
-      <div class="col-md-12">{{this.blog_author}} : {{format_date this.blog_date}}</div>
       <div class="col-md-12">
-        <h3>{{this.blog_title}}</h3><br>
         <p>{{this.blog_body}}</p>
       </div>
     </div>
-    {{/each}}
-    {{!-- end of each statement here  --}}
-      <div class="push"></div>
+          <div class="push"></div>
   </div>
   <div class="col-md-12 text-center" id="newPostDiv">
   <button type="button" class="newPost" value="Submit">
@@ -24,8 +24,6 @@
   </button>
 </div>
 </div>
-
-
 
 
 <script src="/js/new-post.js"></script>

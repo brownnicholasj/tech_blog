@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 // route to get one blog
 router.get('/blog/:id', async (req, res) => {
 	try {
-		const blogData = await blog.findByPk(req.params.id);
+		const blogData = await Blog.findByPk(req.params.id);
 		if (!blogData) {
 			res.status(404).json({ message: 'No blog with this id!' });
 			return;
