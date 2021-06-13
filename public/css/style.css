@@ -97,18 +97,18 @@ a:hover {
 .container #loginBox {
 	position: relative;
 	top: 20;
-	left: 15vw;
+	left: 0vw;
 }
 
 .login-card {
 	border: 2px solid rgb(149, 149, 149);
-	margin: 0 5px;
+	margin: 0 10px;
 	align-self: baseline;
 	height: 30vh;
 	position: relative;
 	left: 50;
 	top: 50;
-	width: 20vw;
+	width: 15vw;
 }
 
 .login-title {
@@ -137,7 +137,7 @@ a:hover {
 	color: rgb(149, 149, 149);
 	font-weight: 900;
 	flex-grow: 1;
-	margin: 5px;
+	margin: 20px;
 }
 
 /* account for smaller screen sizes to stack for mobile first design */

@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 			.slice(0, 4)
 			.map((blog) => blog.get({ plain: true }));
 		// console.log(blogs);
-		res.render('home', { blogs });
+		res.render('home', { blogs, loggedIn: req.session.loggedIn });
 	} catch (error) {
 		res.status(500).json(error);
 	}
