@@ -7,6 +7,7 @@
   <div class="container">
     {{#each blogs}}
     {{!-- run each statement here up to 4 posts --}}
+    <a href="/blog/{{this.id}}" target="blank_" id="blogLink">
     <div class="row" id="blogPost">
       <div class="col-md-12">{{this.blog_author}} : {{format_date this.blog_date}}</div>
       <div class="col-md-12">
@@ -14,9 +15,10 @@
         <p>{{this.blog_body}}</p>
       </div>
     </div>
+    </a>
     {{/each}}
     {{!-- end of each statement here  --}}
-      <div class="push"></div>
+      <div class="break"></div>
   </div>
   <div class="col-md-12 text-center" id="newPostDiv">
   <button type="button" class="newPost" value="Submit">

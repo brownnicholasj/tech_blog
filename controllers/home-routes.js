@@ -7,7 +7,10 @@ router.get('/', async (req, res) => {
 		res.json(err);
 	});
 	try {
-		const blogs = blogData.slice(0, 4).map((blog) => blog.get({ plain: true }));
+		const blogs = blogData
+			.reverse()
+			.slice(0, 4)
+			.map((blog) => blog.get({ plain: true }));
 		// console.log(blogs);
 		res.render('home', { blogs });
 	} catch (error) {
@@ -28,6 +31,17 @@ router.get('/blog/:id', async (req, res) => {
 	} catch (err) {
 		res.status(500).json(err);
 	}
+});
+
+// Login route
+router.get('/login', (req, res) => {
+	// If the user is already logged in, redirect to the homepage
+	if (req.session.loggedIn) {
+		res.redirect('/');
+		return;
+	}
+	// Otherwise, render the 'login' template
+	res.render('login');
 });
 
 module.exports = router;

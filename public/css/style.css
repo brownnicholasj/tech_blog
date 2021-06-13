@@ -41,8 +41,9 @@ a {
 	padding-left: 3px;
 }
 
+
 a:hover {
-	color: black;
+	color: rgb(149, 149, 149);
 	text-shadow: 5px 5px 10px 5px rgb(149, 149, 149);
 }
 
@@ -70,7 +71,7 @@ a:hover {
 	height: 20px;
 }
 
-.push {
+.break {
 	height: 5vh;
 }
 
@@ -91,6 +92,52 @@ a:hover {
 
 .container #blogPosts {
 	height: 10vh;
+}
+
+.container #loginBox {
+	position: relative;
+	top: 20;
+	left: 15vw;
+}
+
+.login-card {
+	border: 2px solid rgb(149, 149, 149);
+	margin: 0 5px;
+	align-self: baseline;
+	height: 30vh;
+	position: relative;
+	left: 50;
+	top: 50;
+	width: 20vw;
+}
+
+.login-title {
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: rgb(149, 149, 149) solid;
+}
+
+.form-input {
+	background-color: rgb(149, 149, 149);
+	color: black;
+	font-weight: 900;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding-top: 5px;
+	align-items: center;
+}
+
+.form-group .btn-primary {
+	background-color: black;
+	border-color: rgb(149, 149, 149);
+	color: rgb(149, 149, 149);
+	font-weight: 900;
+	flex-grow: 1;
+	margin: 5px;
 }
 
 /* account for smaller screen sizes to stack for mobile first design */
