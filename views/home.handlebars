@@ -4,18 +4,26 @@
       Latest Blogs
     </h2>
   </div>
-  <div class="container">
     {{#each blogs}}
+    <a href="/blog/{{this.id}}">
+    <div class="card">
     {{!-- run each statement here up to 4 posts --}}
-    <a href="/blog/{{this.id}}" target="blank_" id="blogLink">
-    <div class="row" id="blogPost">
-      <div class="col-md-12">{{this.blog_author}} : {{format_date this.blog_date}}</div>
-      <div class="col-md-12">
-        <h3>{{this.blog_title}}</h3><br>
-        <p>{{this.blog_body}}</p>
+      <div class="card-body">
+        <h3 class="card-title">
+          {{this.title}}
+          <br>
+          <h4>
+            By: {{this.author}}
+            <br>
+            {{format_date this.date}}
+          </h4>
+        </h3>
+        <p class="card-text">
+          {{this.body}}
+        </p>
       </div>
     </div>
     </a>
     {{/each}}
     {{!-- end of each statement here  --}}
-
+</div>
