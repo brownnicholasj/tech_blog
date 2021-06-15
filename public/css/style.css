@@ -104,11 +104,11 @@ a:hover {
 	border: 2px solid rgb(149, 149, 149);
 	margin: 0 10px;
 	align-self: baseline;
-	height: 30vh;
+	height: 50vh;
 	position: relative;
 	left: 50;
 	top: 50;
-	width: 15vw;
+	width: 20vw;
 }
 
 .login-title {
@@ -121,13 +121,14 @@ a:hover {
 	background-color: rgb(149, 149, 149);
 	color: black;
 	font-weight: 900;
+	padding: 5px;
 }
 
 .form-group {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	padding-top: 5px;
+	padding: 5px;
 	align-items: center;
 }
 

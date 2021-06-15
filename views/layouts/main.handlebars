@@ -24,8 +24,10 @@
         Tech Blog
       </h1>
       <h2 class="col-2"><i class="fas fa-folder"></i><a href="/">Home</a></h2>
-      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/">Dashboard</a></h2>
+      <h2 class="col-2"><i class="fas fa-folder"></i><a href="/dashboard">Dashboard</a></h2>
+      {{#unless loggedIn}}
       <h2 class="col-2"><i class="fas fa-folder"></i><a href="/login">Login</a></h2>
+      {{/unless}}
       {{#if loggedIn}}
       <h2 class="col-2"><i class="fas fa-folder"></i><a href="/login/logout" class="logout">Logout</a></h2>
       {{/if}}
