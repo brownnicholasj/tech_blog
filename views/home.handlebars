@@ -13,13 +13,12 @@
           {{this.title}}
           <br>
           <h4>
-            By: {{this.author}}
-            <br>
-            {{format_date this.date}}
+            By: {{this.author}} on {{format_date this.date}}
           </h4>
         </h3>
+        <br>
         <p class="card-text">
-          {{this.body}}
+          {{blog_preview this.body}}
         </p>
       </div>
     </div>

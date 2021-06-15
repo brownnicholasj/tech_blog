@@ -52,10 +52,6 @@ a:hover {
 	height: 20px;
 }
 
-.card {
-	background-color: black;
-}
-
 #homeHeader {
 	font-size: 36px;
 	text-shadow: 1px 1px 3px rgb(149, 149, 149);
@@ -63,11 +59,8 @@ a:hover {
 	border: 2px solid black;
 	box-shadow: 2px 2px black;
 }
-
-#blogPost {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	border-bottom: dashed rgb(149, 149, 149);
+.card {
+	background-color: black;
 }
 
 .break {
