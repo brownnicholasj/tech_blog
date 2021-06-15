@@ -12,15 +12,15 @@ Comments.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		comment_body: {
+		body: {
 			type: DataTypes.STRING(15000),
 			allowNull: true,
 		},
-		comment_author: {
+		author: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		comment_date: {
+		date: {
 			type: DataTypes.DATE,
 			allowNull: false,
 		},
@@ -28,6 +28,13 @@ Comments.init(
 			type: DataTypes.INTEGER,
 			references: {
 				model: 'blog',
+				key: 'id',
+			},
+		},
+		user_id: {
+			type: DataTypes.INTEGER,
+			refereces: {
+				model: 'user',
 				key: 'id',
 			},
 		},

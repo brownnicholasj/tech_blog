@@ -11,25 +11,28 @@ Blog.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		blog_title: {
+		title: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		blog_body: {
+		author: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		body: {
 			type: DataTypes.STRING(15000),
 			allowNull: true,
 		},
-		blog_author: {
-			type: DataTypes.STRING,
-			allowNull: false,
-			references: {
-				model: 'user',
-				key: 'username',
-			},
-		},
-		blog_date: {
+		date: {
 			type: DataTypes.DATE,
 			allowNull: false,
+		},
+		user_id: {
+			type: DataTypes.INTEGER,
+			references: {
+				model: 'user',
+				key: 'id',
+			},
 		},
 	},
 	{

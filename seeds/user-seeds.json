@@ -1,0 +1,17 @@
+[
+  {
+    "username": "TechCrunch",
+    "email": "techcrunch@email.com",
+    "password": "password"
+  },
+  {
+    "username": "user1",
+    "email": "user1@email.com",
+    "password": "password"
+  },
+  {
+    "username": "user2",
+    "email": "user2@email.com",
+    "password": "password"
+  }
+]

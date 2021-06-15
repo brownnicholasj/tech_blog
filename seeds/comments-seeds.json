@@ -1,0 +1,16 @@
+[
+  {
+    "body": "Great article, I really enjoyed it",
+    "author": "User1",
+    "date": "06/13/2021 06:15",
+    "blog_id": 1,
+    "user_id": 1
+  },
+  {
+    "body": "Cool!",
+    "author": "User2",
+    "date": "06/13/2021 06:20",
+    "blog_id": 1,
+    "user_id": 2
+  }
+]
