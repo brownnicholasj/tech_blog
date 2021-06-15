@@ -1,4 +1,13 @@
 const User = require('./User');
 const Blog = require('./Blog');
+const Comments = require('./Comments');
 
-module.exports = { User, Blog };
+// Blog.hasOne(User, {
+// 	foreignKey: 'username',
+// });
+
+// User.hasMany(Blog, {
+// 	foreignKey: 'blog_author',
+// });
+
+module.exports = { User, Blog, Comments };
