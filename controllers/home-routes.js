@@ -34,11 +34,11 @@ router.get('/blog/:id', async (req, res) => {
 	}
 });
 
-router.get('/dashboard', async (req, res) => {
-	const blogData = await Blog.findAll().catch((err) => {
-		res.json(err);
-	});
+router.get('/dashboard', withAuth, async (req, res) => {
 	try {
+		const blogData = await Blog.findAll().catch((err) => {
+			res.json(err);
+		});
 		const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
 		// console.log(blogs);
 		res.render('dashboard', { blogs, loggedIn: req.session.loggedIn });

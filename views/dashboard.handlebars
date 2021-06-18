@@ -1,19 +1,20 @@
 <div class="container" id="blogPosts">
   <div class="col-md-12 text-center" id="homeTitle">
     <h2 id="homeHeader">
-      Blogs
+      {{blogs.[0].author}}'s Blogs
     </h2>
   </div>
   <div class="container">
     {{#each blogs}}
     {{!-- run each statement here up to 4 posts --}}
     <a href="/blog/{{this.id}}" target="blank_" id="blogLink">
-    <div class="row" id="blogPost">
-      <div class="col-md-12">{{this.blog_author}} : {{format_date this.blog_date}}</div>
-      <div class="col-md-12">
-        <h3>{{this.blog_title}}</h3><br>
-        <p>{{this.blog_body}}</p>
-      </div>
+    <div class="row" id="blogPostDash">
+        <div class="col-md-8">
+          <h3>{{this.title}}</h3>
+        </div>
+        <div class="col-md-4">
+          {{format_date this.date}}
+        </div>
     </div>
     </a>
     {{/each}}

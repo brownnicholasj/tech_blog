@@ -53,6 +53,15 @@ a:hover {
 	margin-top: 5vh;
 }
 
+#blogPostDash {
+	/* height: 100%; */
+	margin-top: 2vh;
+	padding: 5px;
+	flex-wrap: nowrap;
+	border: solid rgb(149, 149, 149);
+	text-align: center;
+}
+
 #homeTitle {
 	height: 20px;
 }
