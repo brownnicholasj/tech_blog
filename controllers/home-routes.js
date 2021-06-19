@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Blog = require('../models/Blog');
+const { Blog, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // route to get all blogs
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 			.reverse()
 			.slice(0, 4)
 			.map((blog) => blog.get({ plain: true }));
-		// console.log(blogs);
+
 		res.render('home', { blogs, loggedIn: req.session.loggedIn });
 	} catch (error) {
 		res.status(500).json(error);
@@ -31,6 +31,17 @@ router.get('/blog/:id', async (req, res) => {
 		res.render('blog', { blog, loggedIn: req.session.loggedIn });
 	} catch (err) {
 		res.status(500).json(err);
+	}
+});
+
+router.get('/blog', async (req, res) => {
+	try {
+		res.render('newBlog', {
+			loggedIn: req.session.loggedIn,
+			username: req.session.username,
+		});
+	} catch (error) {
+		res.status(500).json(error);
 	}
 });
 

@@ -50,14 +50,15 @@ router.post('/', async (req, res) => {
 		req.session.save(() => {
 			if (!req.session.loggedIn) {
 				req.session.loggedIn = true;
+				req.session.username = dbUserData.username;
 			}
-			res
-				.status(200)
-				.json({
-					user: dbUserData,
-					loggedIn: req.session.loggedIn,
-					message: 'You are now logged in!',
-				});
+
+			res.status(200).json({
+				user: dbUserData,
+				loggedIn: req.session.loggedIn,
+				username: req.session.username,
+				message: 'You are now logged in!',
+			});
 		});
 	} catch (err) {
 		console.log(err);
