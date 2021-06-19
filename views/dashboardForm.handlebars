@@ -1,21 +1,25 @@
 <div class="container" id="blogPosts">
   <div class="col-md-12 text-center" id="homeTitle">
     <h2 id="homeHeader">
-      {{blogs.[0].author}}'s Blogs
+      {{blog.author}}'s Blog
     </h2>
   </div>
   <div class="container">
-    {{#each blogs}}
-    {{!-- run each statement here up to 4 posts --}}
-    <a href="/blog/{{this.id}}" target="blank_" id="blogLink">
-    <div class="row" id="blogPostDash">
-        <div class="col-md-8">
-          <h3>{{this.title}}</h3>
-        </div>
-        <div class="col-md-4">
-          {{format_date this.date}}
-        </div>
-    </div>
-    </a>
-    {{/each}}
-    {{!-- end of each statement here  --}}
+  <form class="form update-blog-form">
+      <div class="form-group-update">
+        <label for="blog-title">Title:</label>
+        <input class="form-input-update" type="text" id="blog-title" name="blog-title" data-id="{{blog.id}}" value="{{blog.title}}" />
+      </div>
+      <div class="form-group-update">
+        <label for="blog-body">Body:</label>
+        <textarea class="form-input-update-body" id="blog-body" name="blog-body" >{{blog.body}}</textarea>
+      </div>
+      <div class="form-group-update">
+        <button type="submit" class="btn btn-primary updateBtn" id="updateBtn">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- console.log('start of js'); --}}
+<script src="/js/post.js"></script>

@@ -129,12 +129,39 @@ a:hover {
 	padding: 5px;
 }
 
+.form-input-update {
+	width: 50vw;
+	margin: 20px;
+	height: 5vh;
+}
+
+.form-input-update-body {
+	width: 50vw;
+	margin: 20px;
+	height: 15vh;
+}
+
 .form-group {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	padding: 5px;
 	align-items: center;
+}
+
+.form-group-update {
+	width: 50vw;
+}
+
+#updateBtn {
+	align-self: center;
+	width: 50vw;
+	background-color: black;
+	border-color: rgb(149, 149, 149);
+	color: rgb(149, 149, 149);
+	font-weight: 900;
+	flex-grow: 1;
+	margin: 20px;
 }
 
 .form-group .btn-primary {

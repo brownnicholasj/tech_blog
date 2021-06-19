@@ -40,10 +40,24 @@ router.get('/dashboard', withAuth, async (req, res) => {
 			res.json(err);
 		});
 		const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
-		// console.log(blogs);
 		res.render('dashboard', { blogs, loggedIn: req.session.loggedIn });
 	} catch (error) {
 		res.status(500).json(error);
+	}
+});
+
+router.get('/dashboard/:id', withAuth, async (req, res) => {
+	try {
+		const blogData = await Blog.findByPk(req.params.id);
+		if (!blogData) {
+			res.status(404).json({ message: 'No blog with this id!' });
+			return;
+		}
+
+		const blog = blogData.get({ plain: true });
+		res.render('dashboardForm', { blog, loggedIn: req.session.loggedIn });
+	} catch (err) {
+		res.status(500).json(err);
 	}
 });
 
