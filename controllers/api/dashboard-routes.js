@@ -1,16 +1,16 @@
 const router = require('express').Router();
 const Blog = require('../../models/Blog');
+const Comment = require('../../models/Comments');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/comment', withAuth, async (req, res) => {
 	try {
-		const blogData = await Blog.create({
-			blog_name: req.body.blog_name,
-			description: req.body.description,
-			guest_name: req.body.guest_name,
-			has_nuts: req.body.has_nuts,
+		const commentData = await Comment.create({
+			body: req.body.comment_body,
+			blog_id: req.body.blog_id,
+			author: req.body.author,
 		});
-		res.status(200).json(blogData);
+		res.status(200).json(commentData);
 	} catch (err) {
 		res.status(400).json(err);
 	}

@@ -105,6 +105,14 @@ a:hover {
 	left: 0vw;
 }
 
+#commentContainer {
+	display: none;
+	position: relative;
+	margin-top: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
 .login-card {
 	border: 2px solid rgb(149, 149, 149);
 	margin: 0 10px;
@@ -136,6 +144,12 @@ a:hover {
 }
 
 .form-input-update-body {
+	width: 50vw;
+	margin: 20px;
+	height: 15vh;
+}
+
+.form-input-comment-body {
 	width: 50vw;
 	margin: 20px;
 	height: 15vh;
@@ -173,6 +187,13 @@ a:hover {
 	font-weight: 900;
 	flex-grow: 1;
 	margin: 20px;
+}
+
+.commentLink {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 40px;
 }
 
 .form-group .btn-primary {

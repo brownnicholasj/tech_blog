@@ -66,7 +66,11 @@ router.get('/dashboard/:id', withAuth, async (req, res) => {
 		}
 
 		const blog = blogData.get({ plain: true });
-		res.render('dashboardForm', { blog, loggedIn: req.session.loggedIn });
+		res.render('dashboardForm', {
+			blog,
+			loggedIn: req.session.loggedIn,
+			username: req.session.username,
+		});
 	} catch (err) {
 		res.status(500).json(err);
 	}
