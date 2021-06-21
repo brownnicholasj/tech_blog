@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models');
+const { Blog, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 // route to get all blogs
@@ -22,13 +22,20 @@ router.get('/', async (req, res) => {
 // route to get one blog
 router.get('/blog/:id', async (req, res) => {
 	try {
-		const blogData = await Blog.findByPk(req.params.id);
+		const blogData = await Blog.findByPk(req.params.id, {
+			include: [
+				{
+					model: Comments,
+				},
+			],
+		});
 		if (!blogData) {
 			res.status(404).json({ message: 'No blog with this id!' });
 			return;
 		}
 		const blog = blogData.get({ plain: true });
-		res.render('blog', { blog, loggedIn: req.session.loggedIn });
+		console.log(blog);
+		res.render('blog', { blog, loggedIn: req.session.loggedIn, comment: true });
 	} catch (err) {
 		res.status(500).json(err);
 	}
