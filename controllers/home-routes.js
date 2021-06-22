@@ -8,10 +8,7 @@ router.get('/', async (req, res) => {
 		res.json(err);
 	});
 	try {
-		const blogs = blogData
-			.reverse()
-			.slice(0, 4)
-			.map((blog) => blog.get({ plain: true }));
+		const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
 
 		res.render('home', { blogs, loggedIn: req.session.loggedIn });
 	} catch (error) {
