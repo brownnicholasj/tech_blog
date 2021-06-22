@@ -77,7 +77,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 	}
 });
 
-router.get('/dashboard/:id', withAuth, async (req, res) => {
+router.get('/dashboard/:id', async (req, res) => {
 	try {
 		const blogData = await Blog.findByPk(req.params.id);
 		if (!blogData) {
