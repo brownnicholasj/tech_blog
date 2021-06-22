@@ -17,24 +17,22 @@ async function updateHandler(event) {
 	});
 
 	if (response.ok) {
-		document.location.replace('/');
+		document.location.replace('/dashboard');
 	} else {
 		alert('Failed to update blog');
 	}
 }
 
-async function newButtonHandler(event) {
+async function deleteHandler(event) {
 	event.preventDefault();
 
-	const blog_title = document.querySelector('#blog-title').value;
-	const blog_body = document.querySelector('#blog-body').value;
 	const blog_id = document.querySelector('#blog-title').getAttribute('data-id');
 
+	console.log(blog_id);
 	const response = await fetch(`/api/dashboard/${blog_id}`, {
-		method: 'PUT',
+		method: 'DELETE',
 		body: JSON.stringify({
-			blog_title,
-			blog_body,
+			blog_id,
 		}),
 		headers: {
 			'Content-Type': 'application/json',
@@ -42,16 +40,12 @@ async function newButtonHandler(event) {
 	});
 
 	if (response.ok) {
-		document.location.replace('/');
+		document.location.replace('/dashboard');
 	} else {
-		alert('Failed to update blog');
+		alert('Failed to delete blog');
 	}
 }
 
-document
-	.querySelector('.update-blog-form')
-	.addEventListener('submit', updateHandler);
+document.getElementById('updateBtn').addEventListener('click', updateHandler);
 
-// document
-// 	.querySelector('.newBlogBtn')
-// 	.addEventListener('click', newButtonHandler);
+document.getElementById('deleteBtn').addEventListener('click', deleteHandler);

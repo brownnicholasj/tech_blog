@@ -178,6 +178,17 @@ a:hover {
 	margin: 20px;
 }
 
+#deleteBtn {
+	align-self: center;
+	width: 50vw;
+	background-color: black;
+	border-color: rgb(149, 149, 149);
+	color: rgb(149, 149, 149);
+	font-weight: 900;
+	flex-grow: 1;
+	margin: 20px;
+}
+
 #createBtn {
 	align-self: center;
 	width: 50vw;
