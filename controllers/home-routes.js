@@ -59,11 +59,18 @@ router.get('/blog', async (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
 	try {
-		const blogData = await Blog.findAll().catch((err) => {
+		const username = req.session.username;
+		const blogData = await Blog.findAll({
+			where: { author: username },
+		}).catch((err) => {
 			res.json(err);
 		});
 		const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
-		res.render('dashboard', { blogs, loggedIn: req.session.loggedIn });
+		res.render('dashboard', {
+			blogs,
+			loggedIn: req.session.loggedIn,
+			username: username,
+		});
 	} catch (error) {
 		res.status(500).json(error);
 	}
