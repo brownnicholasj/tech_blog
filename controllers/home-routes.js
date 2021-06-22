@@ -63,12 +63,19 @@ router.get('/dashboard', withAuth, async (req, res) => {
 		}).catch((err) => {
 			res.json(err);
 		});
-		const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
-		res.render('dashboard', {
-			blogs,
-			loggedIn: req.session.loggedIn,
-			username: username,
-		});
+		if (!blogData) {
+			res.render('dashboard', {
+				loggedIn: req.session.loggedIn,
+				username: username,
+			});
+		} else {
+			const blogs = blogData.reverse().map((blog) => blog.get({ plain: true }));
+			res.render('dashboard', {
+				blogs,
+				loggedIn: req.session.loggedIn,
+				username: username,
+			});
+		}
 	} catch (error) {
 		res.status(500).json(error);
 	}

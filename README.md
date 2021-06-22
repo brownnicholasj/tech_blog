@@ -103,34 +103,6 @@ A thanks to the following contributors to this project:
 - Nicholas Brown (brownnicholasj.dev@gmail.com)
 - TechCrunch.com (providing boilerplate topics to populate starter blogs)
 
-### Behind the Code
-
-- The database schema is stored and can be used to create the database with the
-  MySQL shell commands <br> ![btc001](./public/images/btc001.jpg)
-
-- The Database Models are defined within the models folder for Category,
-  Product, Tag, and ProductTag: <br>
-  ![btc002_1](./public/images/btc002_1.jpg)<br>
-  ![btc002_2](./public/images/btc002_2.jpg)<br>
-  ![btc002_3](./public/images/btc002_3.jpg)<br>
-  ![btc002_4](./public/images/btc002_4.jpg)
-
-- Associations are configured in the models folder within the index.js<br>
-  ![btc003](./public/images/btc003.jpg)
-
-- Routes are defined within the routes/api folder to perform the CRUD actions
-  for each api ![btc004](./public/images/btc004.jpg)
-
-- Seed file provided can be ran to populate the database <br>
-  ![btc005](./public/images/btc005.jpg)
-
-- Database access is done through variable file utilizing dotenv <br>
-  ![btc006](./public/images/btc006.jpg)
-
-- Express is used to listen for api's and Sequelize is utilized to access and
-  perform functions within the database <br>
-  ![btc007](./public/images/btc007.jpg)
-
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly
